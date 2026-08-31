@@ -1,0 +1,92 @@
+[
+    {
+      "id": "hugo-campos",
+      "nombre": "Hugo Campos",
+      "dorsal": 12,
+      "equipo": "Azules",
+      "posicion": "Mediocampista",
+      "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Hugo&backgroundColor=00f2fe",
+      "estadisticas": { "goles": 5}
+    },
+    {
+      "id": "eddy-velazquez",
+      "nombre": "Eduardo Velazquez",
+      "dorsal": 4,
+      "equipo": "Azules",
+      "posicion": "Defensa",
+      "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pepe&backgroundColor=00f2fe",
+      "estadisticas": { "goles": 1}
+    },
+    {
+      "id": "arturo-china",
+      "nombre": "China",
+      "dorsal": 5,
+      "equipo": "Azules",
+      "posicion": "Portero/Delantero",
+      "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+      "estadisticas": { "goles": 3}
+    },
+    {
+        "id": "chris-delgado",
+        "nombre": "Chris",
+        "dorsal": 7,
+        "equipo": "Azules",
+        "posicion": "Defensa/Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 4}
+      },
+      {
+        "id": "rogelio-verduzco",
+        "nombre": "Rogelio Verduzco",
+        "dorsal": 9,
+        "equipo": "Azules",
+        "posicion": "Delantero",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 3}
+      },
+      {
+        "id": "mario-larios",
+        "nombre": "Mario Larios",
+        "dorsal": 10,
+        "equipo": "Azules",
+        "posicion": "Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 4}
+      },
+      {
+        "id": "rafa-sanchez",
+        "nombre": "Rafa Sánchez",
+        "dorsal": 11,
+        "equipo": "Azules",
+        "posicion": "Defensa/Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 4}
+      },
+      {
+        "id": "jesus-aviles",
+        "nombre": "Jesús Avilés",
+        "dorsal": 17,
+        "equipo": "Azules",
+        "posicion": "Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 4}
+      },
+      {
+        "id": "fer-velazquez",
+        "nombre": "Fernando Velazquez",
+        "dorsal": 9,
+        "equipo": "Rojos",
+        "posicion": "Delantero",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 4}
+      },
+      {
+        "id": "martin-reyes",
+        "nombre": "Martín Reyes",
+        "dorsal": 10,
+        "equipo": "Rojos",
+        "posicion": "Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 4}
+      }
+  ]
