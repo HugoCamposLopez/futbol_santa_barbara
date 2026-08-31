@@ -1,13 +1,14 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import ProtectedRoute from './routes/ProtectedRoute';
+import ProtectedRoute from './routes/ProtectedRoutes';
 
 // Importaciones de tus páginas...
 
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      {/* 👈 Agregamos el basename con la ruta de tu repositorio */}
+      <Router basename="/futbol_santa_barbara">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
