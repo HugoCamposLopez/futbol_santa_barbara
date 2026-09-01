@@ -1,7 +1,13 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './routes/ProtectedRoutes';
-
+import Estadisticas from './pages/Estadisticas';
+import Home from './pages/Home';
+import Navbar from './components/Navbar'
+import Equipos from './pages/Equipos';
+import PerfilJugador from './pages/PerfilJugador';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 // Importaciones de tus páginas...
 
 function App() {
