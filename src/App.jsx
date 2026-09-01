@@ -14,7 +14,7 @@ function App() {
   return (
     <AuthProvider>
       {/* 👈 Agregamos el basename con la ruta de tu repositorio */}
-      <Router basename="/futbol_santa_barbara">
+      <Router >
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
