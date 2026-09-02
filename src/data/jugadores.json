@@ -81,11 +81,56 @@
         "estadisticas": { "goles": 4}
       },
       {
-        "id": "martin-reyes",
-        "nombre": "Martín Reyes",
+        "id": "martin-montes",
+        "nombre": "Martín Montes",
         "dorsal": 10,
         "equipo": "Rojos",
         "posicion": "Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 4}
+      },
+      {
+        "id": "jesus-valladares",
+        "nombre": "Jesús Valladares",
+        "dorsal": 5,
+        "equipo": "Rojos",
+        "posicion": "Defensa/Mediocampista/Delantero",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 1}
+      },
+      {
+        "id": "roberto-blake",
+        "nombre": "Roberto Blake",
+        "dorsal": 9,
+        "equipo": "Rojos",
+        "posicion": "Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 0}
+      },
+      {
+        "id": "walter-noriega",
+        "nombre": "Walter Noriega",
+        "dorsal": 8,
+        "equipo": "Rojos",
+        "posicion": "Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 0}
+      },
+      {
+        "id": "carlos-gaitan",
+        "nombre": "Carlos Gaitán",
+        "dorsal": 24,
+        "equipo": "Rojos",
+        "posicion": "Defensa/Mediocampista",
+        "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
+        "estadisticas": { "goles": 2}
+      },
+      {
+        "id": "vicente-villa",
+        "nombre": "Vicente Villa",
+        "dorsal": 7,
+        "equipo": "Rojos",
+        "posicion": "Defensa/Mediocampista/Delantero",
         "fotoUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=9d4edd",
         "estadisticas": { "goles": 4}
       }

@@ -26,7 +26,7 @@ export default function Equipos() {
           alignItems: 'center',
           gap: '10px'
         }}>
-          🔵 Equipo Azules ({azules.length})
+          🔵 Equipo Azul ({azules.length})
         </h2>
 
         <div className="grid-2">
@@ -55,7 +55,7 @@ export default function Equipos() {
           alignItems: 'center',
           gap: '10px'
         }}>
-          🔴 Equipo Rojos ({rojos.length})
+          🔴 Equipo Rojo ({rojos.length})
         </h2>
 
         <div className="grid-2">
