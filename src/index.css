@@ -321,3 +321,162 @@ body::after {
     font-size: 0.8rem !important;
   }
 }
+/* ==========================================
+   NAVBAR GLASSMorphism & HAMBURGUESA PERFECTA
+   ========================================== */
+.header-sticky {
+  position: sticky;
+  top: 15px;
+  z-index: 1000;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 0 15px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.navbar-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  background: linear-gradient(135deg, var(--neon-cyan), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-admin {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--neon-pink);
+  background: rgba(247, 37, 133, 0.1);
+  border: 1px solid rgba(247, 37, 133, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* BOTÓN HAMBURGUESA TACTIL ELEVADO */
+.hamburger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.hamburger-btn:active {
+  transform: scale(0.92);
+}
+
+/* ANIMACIÓN SIMÉTRICA DE LA X */
+.line {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+.line-top.open {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.line-mid.open {
+  opacity: 0;
+}
+
+.line-bot.open {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* MENÚ DESPLEGABLE EN MOBILE */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 12px;
+  gap: 8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.show {
+  opacity: 1;
+  max-height: 400px;
+}
+
+.mobile-nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-nav-link.active {
+  background: rgba(0, 242, 254, 0.15);
+  border-color: rgba(0, 242, 254, 0.4);
+  color: var(--neon-cyan);
+}
+
+.mobile-admin {
+  color: var(--neon-pink);
+  background: rgba(247, 37, 133, 0.1);
+  border-color: rgba(247, 37, 133, 0.3);
+  justify-content: center;
+  margin-top: 4px;
+}
+
+/* MEDIA QUERIES MOBILE */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+}

@@ -1,91 +1,84 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  // Función helper para marcar el link activo con un glow
   const isActive = (path) => location.pathname === path;
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <header style={{
-      position: 'sticky',
-      top: '15px',
-      zIndex: 100,
-      maxWidth: '900px',
-      margin: '0 auto 30px',
-      padding: '0 15px'
-    }}>
-      <nav 
-        className="glass-panel" 
-        style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          justify: 'space-between',
-          padding: '12px 24px', 
-          borderRadius: '50px',
-          background: 'rgba(15, 23, 42, 0.65)',
-          backdropFilter: 'blur(16px)',
-          WebkitBackdropFilter: 'blur(16px)',
-          border: '1px solid rgba(255, 255, 255, 0.12)',
-          boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-        }}
-      >
-        {/* LOGO / NOMBRE LIGA */}
-        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+    <header className="header-sticky">
+      <nav className="navbar-container glass-panel">
+        
+        {/* LOGO IZQUIERDA */}
+        <Link to="/" onClick={closeMenu} className="navbar-logo">
           <span style={{ fontSize: '1.2rem' }}>⚽</span>
-          <span style={{ 
-            fontWeight: 800, 
-            fontSize: '1.05rem', 
-            background: 'linear-gradient(135deg, var(--neon-cyan), #fff)', 
-            WebkitBackgroundClip: 'text', 
-            WebkitTextFillColor: 'transparent',
-            letterSpacing: '0.5px'
-          }}>
-            SANTA BÁRBARA
-          </span>
+          <span className="navbar-title">SANTA BÁRBARA</span>
         </Link>
 
-        {/* ENLACES PRINCIPALES */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', width: '100%', justifyContent: 'center' }}>
-          <Link 
-            to="/estadisticas" 
-            className={`nav-link ${isActive('/estadisticas') ? 'active' : ''}`}
-          >
-            Goles
-          </Link>
-          <Link 
-            to="/equipos" 
-            className={`nav-link ${isActive('/equipos') ? 'active' : ''}`}
-          >
-            Equipos
-          </Link>
-          <Link 
-            to="/historial" 
-            className={`nav-link ${isActive('/historial') ? 'active' : ''}`}
-          >
-            Historial
-          </Link>
+        {/* MENÚ DESKTOP */}
+        <div className="desktop-menu">
+          <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>Inicio</Link>
+          <Link to="/estadisticas" className={`nav-link ${isActive('/estadisticas') ? 'active' : ''}`}>Goles</Link>
+          <Link to="/equipos" className={`nav-link ${isActive('/equipos') ? 'active' : ''}`}>Equipos</Link>
+          <Link to="/historial" className={`nav-link ${isActive('/historial') ? 'active' : ''}`}>Historial</Link>
+          <Link to="/admin" className="btn-admin">🔒 Admin</Link>
         </div>
 
-        {/* BOTÓN ADMIN RESTRICTED */}
-        <Link 
-          to="/admin" 
-          style={{ 
-            textDecoration: 'none',
-            fontSize: '0.85rem',
-            fontWeight: 700,
-            color: 'var(--neon-pink)',
-            background: 'rgba(247, 37, 133, 0.1)',
-            border: '1px solid rgba(247, 37, 133, 0.3)',
-            borderRadius: '20px',
-            padding: '6px',
-            transition: 'all 0.3s ease',
-            width: '110px',
-          }}
+        {/* BOTÓN HAMBURGUESA / X (CON SVG PARA EVITAR DISPAREJOS) */}
+        <button 
+          className="hamburger-btn" 
+          onClick={toggleMenu}
+          aria-label="Menú"
         >
-          🔒 Admin
-        </Link>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path 
+              className={`line line-top ${isOpen ? 'open' : ''}`} 
+              d="M 2 4 L 18 4" 
+              stroke="var(--neon-cyan)" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+            />
+            <path 
+              className={`line line-mid ${isOpen ? 'open' : ''}`} 
+              d="M 2 10 L 18 10" 
+              stroke="var(--neon-cyan)" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+            />
+            <path 
+              className={`line line-bot ${isOpen ? 'open' : ''}`} 
+              d="M 2 16 L 18 16" 
+              stroke="var(--neon-cyan)" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+            />
+          </svg>
+        </button>
+
       </nav>
+
+      {/* MENÚ DESPLEGABLE MOBILE (FUERA DEL NAV PARA EVITAR RECORTES) */}
+      <div className={`mobile-menu ${isOpen ? 'show' : ''}`}>
+        <Link to="/" onClick={closeMenu} className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`}>
+          🏠 Inicio
+        </Link>
+        <Link to="/estadisticas" onClick={closeMenu} className={`mobile-nav-link ${isActive('/estadisticas') ? 'active' : ''}`}>
+          📊 Goles
+        </Link>
+        <Link to="/equipos" onClick={closeMenu} className={`mobile-nav-link ${isActive('/equipos') ? 'active' : ''}`}>
+          🛡️ Equipos
+        </Link>
+        <Link to="/historial" onClick={closeMenu} className={`mobile-nav-link ${isActive('/historial') ? 'active' : ''}`}>
+          🏟️ Historial
+        </Link>
+        <Link to="/admin" onClick={closeMenu} className="mobile-nav-link mobile-admin">
+          🔒 Panel Admin
+        </Link>
+      </div>
     </header>
   );
 }
